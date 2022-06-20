@@ -1,4 +1,4 @@
-import _root_.io.r2d211.PblshPlgnGHPckgsPlugin.ghPckgPomConsistency
+import sbtghplugin.PblshPlgnGHPckgsPlugin.ghPckgPomConsistency
 
 name := "sbt-multi-arch-docker"
 version := "0.0.0-alpha1"
@@ -16,6 +16,7 @@ githubRepository := "sbt-multi-arch-docker"
 githubTokenSource := TokenSource.GitConfig("github.token") || TokenSource.Environment("GITHUB_TOKEN")
 
 enablePlugins(PblshPlgnGHPckgsPlugin)
+
 
 lazy val root = (project in file("."))
   .enablePlugins(UniversalPlugin)
